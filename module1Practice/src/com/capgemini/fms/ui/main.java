@@ -1,14 +1,16 @@
 package com.capgemini.fms.ui;
 
 import java.util.HashMap;
+
 import java.util.Map;
 import java.util.Scanner;
 
+import com.capgemini.fms.Excep.ExceptionClass;
 import com.capgemini.fms.bean.feedback;
 import com.capgemini.fms.service.serviceClass;
 
 public class main {
-	public static void main(String args[]) throws Exception {
+	public static void main(String args[]) throws ExceptionClass {
 
 		Scanner sc = new Scanner(System.in);
 
@@ -51,8 +53,9 @@ public class main {
 				} else {
 
 					System.out.println("Not Added!");
-					break;
 				}
+					break;
+				
 			case 2:
 				m = service.getFeedbackReport();
 				System.out.println(m);
@@ -67,4 +70,3 @@ public class main {
 
 	}
 }
-
