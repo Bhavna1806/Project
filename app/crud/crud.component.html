@@ -1,0 +1,68 @@
+<form #operation= ngForm (ngSubmit)="add(operation)">
+<table>
+  <tr>
+    <td>
+      id:<input type="textbox" name ="id" value="id" [(ngModel)]="operation.empId">
+      </td>
+      <td>
+      name:<input type="textbox" name="name" value="name" [(ngModel)]="operation.empName">
+      </td>
+      <td>
+      salary:<input type="textbox" name="salary" value="salary" [(ngModel)]="operation.empSal">
+      </td>
+      <td>
+      department:<input type="textbox" name="department" value="department" [(ngModel)]="operation.empDep"a>
+      </td>
+      <td>
+        <input type="submit" value="addEmployee">
+      </td>
+      
+
+  </tr>
+</table>
+
+</form>
+
+<table border="1">
+  <tr *ngFor="let employee of employees, let i=index">
+    <td>
+      {{employee.empId}} 
+    </td>
+    <td>
+      {{employee.empName}}
+    </td>
+    <td>
+        {{employee.empSal}}
+      </td>
+      <td>
+          {{employee.empDep}}
+        </td>
+        <td><input type="button" value="delete" (click)="delete(i)"></td>
+       <td> <input type="submit" value="update" (click)="updation(i)"></td>
+    
+  </tr>
+  
+</table>
+<form #alien= ngForm (ngSubmit)="update(alien)">
+    <table>
+      <tr>
+        <td>
+          id:<input type="textbox" name ="id" value="id" [(ngModel)]="alien.empId">
+          </td>
+          <td>
+          name:<input type="textbox" name="name" value="name" [(ngModel)]="alien.empName">
+          </td>
+          <td>
+          salary:<input type="textbox" name="salary" value="salary" [(ngModel)]="alien.empSal">
+          </td>
+          <td>
+          department:<input type="textbox" name="department" value="department" [(ngModel)]="alien.empDep"a>
+          </td>
+          <td>
+            <input type="submit" value="updateEmployee">
+          </td>
+          
+    
+      </tr>
+    </table>
+    

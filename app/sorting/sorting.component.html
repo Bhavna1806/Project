@@ -1,0 +1,37 @@
+<table border="1">
+    <tr>
+      <td>
+      <input type="button" value="id" (click)="idsorting()">
+        </td>
+        <td>
+        <input type="button" value="name" (click)="namesorting()">
+        </td>
+        <td>
+        <input type="button" value="salary" (click)="salsorting()">
+        </td>
+        <td>
+        <input type="button" value="department" (click)="depsorting()">
+        </td>
+        
+    </tr>
+  
+
+
+      <tr *ngFor="let employee of employees">
+        <td>
+          {{employee.empId}} 
+        </td>
+        <td>
+          {{employee.empName}}
+        </td>
+        <td>
+            {{employee.empSal}}
+          </td>
+          <td>
+              {{employee.empDep}}
+            </td>
+            
+        
+      </tr>
+      </table>
+  
